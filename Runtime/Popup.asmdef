@@ -1,0 +1,16 @@
+{
+    "name": "Popup",
+    "rootNamespace": "",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "DARKNAKU_POPUP"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
