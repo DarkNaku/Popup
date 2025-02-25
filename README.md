@@ -3,12 +3,12 @@
 ### 소개
 'Screen Space - Overlay' 기반에서 동작하는 단순한 팝업 시스템 입니다.
 
-![image](Samples~/Images/screenshot.gif)
+![image](Images/screenshot.gif)
 
 ### 설치방법
 1. 패키지 관리자의 툴바에서 좌측 상단에 플러스 메뉴를 클릭합니다.
 2. 추가 메뉴에서 Add package from git URL을 선택하면 텍스트 상자와 Add 버튼이 나타납니다.
-3. https://github.com/DarkNaku/Popup.git 입력하고 Add를 클릭합니다.
+3. https://github.com/DarkNaku/Popup.git?path=/Assets/Popup 입력하고 Add를 클릭합니다.
 
 ### 사용법
 
