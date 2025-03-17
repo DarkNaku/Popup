@@ -173,6 +173,7 @@ namespace DarkNaku.Popup {
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         private static void OnSubsystemRegistration() {
             _instance = null;
+            _isDestroyed = false;
         }
 
         private void Awake() {

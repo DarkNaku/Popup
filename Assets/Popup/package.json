@@ -1,7 +1,7 @@
 {
   "name": "com.darknaku.popup",
   "displayName": "Popup",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "unity": "2018.3",
   "author": "DarkNaku",
   "description": "DarkNaku's Popup Package - It is a simple pop-up system that operates based on 'Screen Space - Overlay'.",
