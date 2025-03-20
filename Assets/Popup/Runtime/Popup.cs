@@ -96,36 +96,6 @@ namespace DarkNaku.Popup {
         private readonly UnityEvent<string, IPopupHandler> _onPopupShow = new UnityEvent<string, IPopupHandler>();
         private readonly UnityEvent<string, IPopupHandler> _onPopupHide = new UnityEvent<string, IPopupHandler>();
 
-#if UNITY_EDITOR
-        [InitializeOnLoadMethod]
-        private static void PackageImportHandler() {
-            var define = $"DARKNAKU_{MethodBase.GetCurrentMethod().DeclaringType.Assembly.GetName().Name.ToUpper()}";
-
-            System.Array buildTargets = System.Enum.GetValues(typeof(BuildTarget));
-
-            foreach (BuildTarget target in buildTargets) {
-                var buildTargetGroup = BuildPipeline.GetBuildTargetGroup(target);
-
-                if (BuildPipeline.IsBuildTargetSupported(buildTargetGroup, target) == false) continue;
-
-#if UNITY_2023_1_OR_NEWER
-                var namedBuildTarget = UnityEditor.Build.NamedBuildTarget.FromBuildTargetGroup(buildTargetGroup);
-                var defines = PlayerSettings.GetScriptingDefineSymbols(namedBuildTarget);
-#else
-                var defines = PlayerSettings.GetScriptingDefineSymbolsForGroup(buildTargetGroup);
-#endif
-
-                if (defines.IndexOf(define) > 0) continue;
-
-#if UNITY_2023_1_OR_NEWER
-				PlayerSettings.SetScriptingDefineSymbols(namedBuildTarget, $"{defines};{define}".Replace(";;", ";"));
-#else
-                PlayerSettings.SetScriptingDefineSymbolsForGroup(buildTargetGroup, $"{defines};{define}".Replace(";;", ";"));
-#endif
-            }
-        }
-#endif
-
         public static void Register(string key, IPopupHandler handler) {
             Instance._Register(key, handler);
         }
