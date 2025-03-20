@@ -807,7 +807,10 @@ PlayerSettings:
   webGLMemoryGeometricGrowthStep: 0.2
   webGLMemoryGeometricGrowthCap: 96
   webGLPowerPreference: 2
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    Android: DARKNAKU_POPUP
+    Standalone: DARKNAKU_POPUP
+    iPhone: DARKNAKU_POPUP
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}
